@@ -17,7 +17,7 @@ jobs:
           npm install 
           taiko --version
       - name: Scripts
-        uses: ./orgcreate
+        uses: ./actions/orgcreate
         with:
           ts-name:      "testorg42"
           gh-username:  ${{ secrets.GH_Username }}
