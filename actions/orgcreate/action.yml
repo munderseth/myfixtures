@@ -1,0 +1,15 @@
+name: 'Testspace New Org'
+description: 'Creating a new Testspace Orgination'
+inputs:
+  ts-org:  
+    description: 'Testspace orgination name'
+    required: true
+  gh-username:  
+    description: 'user name of GH Org'
+    required: true
+  gh-password: 
+    description: 'password'
+    required: true
+runs:
+  using: 'node12'
+  main: 'orgCreate.js'

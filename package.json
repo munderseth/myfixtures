@@ -1,0 +1,24 @@
+{
+  "name": "myfixtures",
+  "version": "1.0.0",
+  "description": "Library for Actions used for Manual Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/munderseth/myfixtures.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/munderseth/myfixtures/issues"
+  },
+  "homepage": "https://github.com/munderseth/myfixtures#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "taiko": ">=1.0.0"
+  }
+}

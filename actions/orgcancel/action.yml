@@ -1,0 +1,12 @@
+name: 'Testspace Cancel Org'
+description: 'Cancel a Testspace Orgination'
+inputs:
+  gh-username:  
+    description: 'user name of GH Org'
+    required: true
+  gh-password: 
+    description: 'password'
+    required: true
+runs:
+  using: 'node12'
+  main: 'orgCancel.js'
