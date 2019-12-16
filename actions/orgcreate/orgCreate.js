@@ -4,11 +4,13 @@ const core = require('@actions/core');
 async function run() {
     try {
 
-        const tsOrg      = core.gitInput('ts-org');
-        const ghUser     = core.gitInput('gh-username');
-        const ghPassword = core.gitInput('gh-password');
+        const tsOrg      = core.getInput('ts-org');
+        const ghUser     = core.getInput('gh-username');
+        const ghPassword = core.getInput('gh-password');
 
-        await openBrowser();
+       // await openBrowser();
+        await openBrowser({ headless: true, ignoreCertificateErrors: true, args:['--window-size=1024,900']})
+
         await goto("signup.stridespace.com/?plan_id=basic-2");
         await click("Sign up with GitHub");
         await write(ghUser);
