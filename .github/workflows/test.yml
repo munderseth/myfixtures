@@ -7,6 +7,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+      - name: Node.js 12
+        if: github.event.action == github.workflow
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
       - name: Install
         run: |
           npm install -g taiko
