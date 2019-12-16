@@ -1,0 +1,17 @@
+name: teststuff
+on: push
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Install
+        run: |
+          npm install -g taiko
+          npm install 
+          taiko --version
+      - name: Scripts
+          echo "Script here"
+          taiko --version 
+
