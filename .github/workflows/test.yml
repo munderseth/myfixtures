@@ -13,6 +13,7 @@ jobs:
           npm install 
           taiko --version
       - name: Scripts
+        run: |
           echo "Script here"
           taiko --version 
 
