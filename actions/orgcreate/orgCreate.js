@@ -5,28 +5,26 @@ async function run() {
     try {
 
         const tsOrg      = core.getInput('ts-org');
-        const ghUser     = core.getInput('gh-username');
-        const ghPassword = core.getInput('gh-password');
+        const tsUser     = core.getInput('ts-username');
+        const tsPassword = core.getInput('ts-password');
 
        // await openBrowser();
         await openBrowser({ headless: true, ignoreCertificateErrors: true, args:['--window-size=1024,900']})
+        await goto("signin.stridespace.com");
+        await write(tsUser);
+        await press("Tab");
+        await write(tsPassword);
+        await click("SUBMIT");
 
         await goto("signup.stridespace.com/?plan_id=basic-2");
-        await click("Sign up with GitHub");
-        await write(ghUser);
-        await press("Tab");
-        await write(ghPassword);
-        await click("Sign in");
-      //  await click("Authorize s2technologies");
-      
+        await click("Sign up with Email");
         await write(tsOrg);
         await click("SUBMIT");
         await write("4242 4242 4242 4242");
         await press("Tab");
         await write("123");
         await click("COMPLETE ACCOUNT");
-        await click("Complete");
-        
+       
         await click("Account");
         await click("Cancel");
         await click("CONFIRM");

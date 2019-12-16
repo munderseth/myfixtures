@@ -4,10 +4,10 @@ inputs:
   ts-org:  
     description: 'Testspace orgination name'
     required: true
-  gh-username:  
+  ts-username:  
     description: 'user name of GH Org'
     required: true
-  gh-password: 
+  ts-password: 
     description: 'password'
     required: true
 runs:
