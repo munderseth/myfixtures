@@ -11,9 +11,7 @@ jobs:
           node-version: '12'
       - name: Install
         run: |
-        #  npm install -g taiko
           npm install 
-        #  taiko --version
       - name: Scripts
         uses: ./actions/orgcreate
         with:
