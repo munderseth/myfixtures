@@ -1,15 +1,22 @@
 name: 'Setup testRepo'
-description: 'Creating a new testRepo from a template'
+description: 'Creating a testRepo from a template'
 inputs:
-  org-name:  # name of test repo
+  temp-org-name:  # name of test repo
+    description: 'Template orgination to use'
+    required: true
+  temp-repo-name:  # name of template repo
+    description: 'Template Repo to create'
+    required: true
+  org-name:  # name of test organization
     description: 'GitHub orgination to use'
     required: true
   repo-name:  # name of test repo
     description: 'Repo to create'
     required: true
-  accesstoken: # API access
+  accesstoken: # API access, same toke for both GH Orgs
     description: 'GH Admin access'
     required: true
+ 
 runs:
   using: 'node12'
   main: 'setuprepo.js'

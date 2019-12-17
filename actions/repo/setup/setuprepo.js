@@ -8,17 +8,22 @@ async function run() {
 
     const octokit = new github.GitHub(myToken);
 
-    const orgName  = core.getInput('org-name');
-    const repoName = core.getInput('repo-name');
+    const temporgName  = core.getInput('temp-org-name');
+    const temprepoName = core.getInput('temp-repo-name');
+    const orgName      = core.getInput('org-name');
+    const repoName     = core.getInput('repo-name');
+  
+    console.log(temporgName)
+    console.log(temprepoName)
     console.log(orgName)
     console.log(repoName)
-     
+       
     //////////////////////////////////////////
     // Create testRepo
     /////////////////////////////////////////
     const { data: createRepo } = await octokit.repos.createUsingTemplate({
-      template_owner: 'munderseth',
-      template_repo: 'testspace.test.manual',
+      template_owner: temprepoName,
+      template_repo:  temprepoName,
       owner: orgName,
       name: repoName,
       description: 'Auto-generated Repo'
