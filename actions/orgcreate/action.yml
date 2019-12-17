@@ -5,7 +5,7 @@ inputs:
     description: 'Testspace orgination name'
     required: true
   ts-username:  
-    description: 'user name of GH Org'
+    description: 'user name of TS Org'
     required: true
   ts-password: 
     description: 'password'
