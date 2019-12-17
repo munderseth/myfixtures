@@ -1,9 +1,0 @@
-name: 'Set'
-description: 'Creating'
-inputs:
-  nameit: 
-    description: 'Blah ..'
-    default: 'Help is on its way'
-runs:
-  using: 'node12'
-  main: 'set.js'

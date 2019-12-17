@@ -5,15 +5,12 @@ const github = require('@actions/github');
 async function run() {
   try { 
 
-    console.log("STARTUP in the JS run() ..")
+    console.log("Setup script running ..")
+
     const myToken = core.getInput('accesstoken');
-
     const octokit = new github.GitHub(myToken);
-
-    //const temporgName  = core.getInput('temp-org-name');
-    //const temprepoName = core.getInput('temp-repo-name');
-    temporgName = 'munderseth';
-    temprepoName = 'testspace.test.manual'
+    const temporgName  = core.getInput('temp-org-name');
+    const temprepoName = core.getInput('temp-repo-name');
     const orgName      = core.getInput('org-name');
     const repoName     = core.getInput('repo-name');
   

@@ -37,5 +37,6 @@ def get_input():
 # main:
 ########################
 
+print("Teardown script running ..")
 get_input()
 run_teardown()
