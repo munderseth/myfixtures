@@ -13,7 +13,7 @@ jobs:
         run: |
           npm install 
       - name: ONE
-        uses: ./actions/set/subfolder
+        uses: ./actions/repo/set
       - name: TWO
         uses: munderseth/temp/actions/set/subfolder@master
         with:
