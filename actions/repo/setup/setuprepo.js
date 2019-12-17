@@ -26,7 +26,7 @@ async function run() {
     // Create testRepo
     /////////////////////////////////////////
     const { data: createRepo } = await octokit.repos.createUsingTemplate({
-      template_owner: temprepoName,
+      template_owner: temporgName,
       template_repo:  temprepoName,
       owner: orgName,
       name: repoName,
