@@ -1,4 +1,4 @@
-const { openBrowser, goto, click, write, press, closeBrowser } = require('taiko');
+const { openBrowser, goto, click, write, press, closeBrowser , waitFor} = require('taiko');
 const core = require('@actions/core');
 
 async function run() {
