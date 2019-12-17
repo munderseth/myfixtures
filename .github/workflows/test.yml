@@ -18,6 +18,12 @@ jobs:
           ts-org:      testopen01
           ts-username: testuser
           ts-password: ${{ secrets.TS_Password }}
+      - name: Test TS Org Teardown
+        uses: ./actions/org/cancel
+        with:
+          ts-org:      testopen01
+          ts-username: testuser
+          ts-password: ${{ secrets.TS_Password }}
       - name: Test Repo Setup
         uses: ./actions/repo/setup
         with:

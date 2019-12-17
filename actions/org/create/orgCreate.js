@@ -22,9 +22,9 @@ async function run() {
         await click("Sign up with Email");
         await write(tsOrg);
         await click("SUBMIT");
-        console.log("Waiting for new Complete")
-        waitFor(5000)
-        await click("Complete")
+       // console.log("Waiting for new Complete")
+       // waitFor(5000)
+       // await click("Complete")
        // await write("4242 4242 4242 4242");
        // await press("Tab");
        // await write("123");

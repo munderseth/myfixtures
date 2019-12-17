@@ -5,19 +5,25 @@ async function run () {
 
     try {
 
-        const ghUser     = core.gitInput('gh-username');
-        const ghPassword = core.gitInput('gh-password');
-
-        await openBrowser();
+        console.log("Teardown Testspace Org script starting ...")
+        const tsOrg      = core.getInput('ts-org');
+        const tsUser     = core.getInput('ts-username');
+        const tsPassword = core.getInput('ts-password');
+        
+       // await openBrowser();
+        await openBrowser({ headless: true, ignoreCertificateErrors: true, args:['--window-size=1024,900']})
+        // To-do: use goto("ts-org"+"stridespace.com") 
         await goto("signin.stridespace.com");
-        await click("Login with GitHub");
-        await write(ghUser);
+        await write(tsUser);
         await press("Tab");
-        await write(ghPassword);
-        await click("Sign in");
+        await write(tsPassword);
+        await click("SUBMIT");
+        console.log("Have logged in now ..")
+
         await click("Account");
         await click("Cancel");
         await click("CONFIRM");
+
     } catch (error) {
         console.error(error);
     } finally {
