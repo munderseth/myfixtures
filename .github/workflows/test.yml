@@ -12,15 +12,21 @@ jobs:
       - name: Install
         run: |
           npm install 
-      - name: Test Repo Setup
-        uses: ./actions/repo/setup
+      - name: ONE
+        uses: ./actions/set/subfolder
+      - name: TWO
+        uses: munderseth/temp/actions/set/subfolder@master
         with:
-          org-name:       munderseth
-          repo-name:      test01
-          accesstoken:    ${{ secrets.GH_Admin }}
-      - name: Test Repo Teardown
-        uses: ./actions/repo/teardown
-        with:
-          org-name:    munderseth
-          repo-name:   test01
-          accesstoken: ${{ secrets.GH_Admin }}
+          nameit: 'not so sure'
+#      - name: Test Repo Setup
+#        uses: ./actions/repo/setup
+#        with:
+#          org-name:       munderseth
+#          repo-name:      test01
+#          accesstoken:    ${{ secrets.GH_Admin }}
+#      - name: Test Repo Teardown
+#        uses: ./actions/repo/teardown
+#        with:
+#          org-name:    munderseth
+#          repo-name:   test01
+#          accesstoken: ${{ secrets.GH_Admin }}
