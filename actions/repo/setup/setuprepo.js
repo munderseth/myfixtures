@@ -8,8 +8,10 @@ async function run() {
 
     const octokit = new github.GitHub(myToken);
 
-    const temporgName  = core.getInput('temp-org-name');
-    const temprepoName = core.getInput('temp-repo-name');
+    //const temporgName  = core.getInput('temp-org-name');
+    //const temprepoName = core.getInput('temp-repo-name');
+    temporgName = 'munderseth';
+    temprepoName = 'testspace.test.manual'
     const orgName      = core.getInput('org-name');
     const repoName     = core.getInput('repo-name');
   

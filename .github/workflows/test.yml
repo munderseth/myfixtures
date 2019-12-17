@@ -15,8 +15,6 @@ jobs:
       - name: Test Repo Setup
         uses: ./actions/repo/setup
         with:
-          temp-org-name:  munderseth
-          temp-repo-name: testspace.test.manual
           org-name:       munderseth
           repo-name:      test01
           accesstoken:    ${{ secrets.GH_Admin }}
