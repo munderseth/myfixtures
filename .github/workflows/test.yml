@@ -12,7 +12,7 @@ jobs:
       - name: Install
         run: |
           npm install 
-      - name: Test Repo setup
+      - name: Test Repo Setup
         uses: ./actions/repo/setup
         with:
           temp-org-name:  munderseth

@@ -13,7 +13,7 @@ inputs:
   repo-name:  # name of test repo
     description: 'Repo to create'
     required: true
-  accesstoken: # API access, same toke for both GH Orgs
+  accesstoken: # API access token for both GH Orgs
     description: 'GH Admin access'
     required: true
 runs:
