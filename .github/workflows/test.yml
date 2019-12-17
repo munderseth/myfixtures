@@ -15,7 +15,7 @@ jobs:
       - name: Test TS Org Setup
         uses: ./actions/org/create
         with:
-          ts-org:      testorg99
+          ts-org:      testopen01
           ts-username: testuser
           ts-password: ${{ secrets.TS_Password }}
       - name: Test Repo Setup
