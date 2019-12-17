@@ -5,5 +5,5 @@ COPY requirements.txt ./
 RUN pip install -r requirements.txt
 # Main
 COPY runner.sh /runner.sh
-COPY *.py /*.py
+COPY teardownrepo.py /teardownrepo.py
 ENTRYPOINT ["/runner.sh"]
