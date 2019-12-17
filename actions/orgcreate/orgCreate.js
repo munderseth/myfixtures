@@ -8,8 +8,8 @@ async function run() {
         const tsUser     = core.getInput('ts-username');
         const tsPassword = core.getInput('ts-password');
 
-       // await openBrowser();
-        await openBrowser({ headless: true, ignoreCertificateErrors: true, args:['--window-size=1024,900']})
+        await openBrowser();
+       // await openBrowser({ headless: true, ignoreCertificateErrors: true, args:['--window-size=1024,900']})
         await goto("signin.stridespace.com");
         await write(tsUser);
         await press("Tab");
