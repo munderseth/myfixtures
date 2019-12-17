@@ -5,10 +5,10 @@ inputs:
     description: 'Testspace orgination name'
     required: true
   ts-username:  
-    description: 'user name of TS Org'
+    description: 'Test User of TS Org'
     required: true
   ts-password: 
-    description: 'password'
+    description: 'Test User password'
     required: true
 runs:
   using: 'node12'
