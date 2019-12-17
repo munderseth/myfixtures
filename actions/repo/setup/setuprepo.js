@@ -4,6 +4,8 @@ const github = require('@actions/github');
 // most @actions toolkit packages have async methods
 async function run() {
   try { 
+
+    console.log("STARTUP in the JS run() ..")
     const myToken = core.getInput('accesstoken');
 
     const octokit = new github.GitHub(myToken);

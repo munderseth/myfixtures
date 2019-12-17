@@ -18,13 +18,13 @@ jobs:
         uses: munderseth/temp/actions/set/subfolder@master
         with:
           nameit: 'not so sure'
-#      - name: Test Repo Setup
-#        uses: ./actions/repo/setup
-#        with:
-#          org-name:       munderseth
-#          repo-name:      test01
-#          accesstoken:    ${{ secrets.GH_Admin }}
-#      - name: Test Repo Teardown
+      - name: Test Repo Setup
+        uses: ./actions/repo/setup
+        with:
+          org-name:       munderseth
+          repo-name:      test01
+          accesstoken:    ${{ secrets.GH_Admin }}
+    # - name: Test Repo Teardown
 #        uses: ./actions/repo/teardown
 #        with:
 #          org-name:    munderseth
