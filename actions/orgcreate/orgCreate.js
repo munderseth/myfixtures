@@ -12,7 +12,6 @@ async function run() {
         await openBrowser({ headless: true, ignoreCertificateErrors: true, args:['--window-size=1024,900']})
         await goto("signin.stridespace.com");
         await write(tsUser);
-        await write("testuser");
         await press("Tab");
         await write(tsPassword);
         await click("SUBMIT");
