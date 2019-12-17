@@ -13,11 +13,11 @@ jobs:
         run: |
           npm install 
       - name: Test Teardown
-          uses: ./actions/repo/teardown
-          with:
-            org-name:    munderseth
-            repo-name:   test01
-            accesstoken: ${{ secrets.GH_Admin }}
+        uses: ./actions/repo/teardown
+        with:
+          org-name:    munderseth
+          repo-name:   test01
+          accesstoken: ${{ secrets.GH_Admin }}
      
 #      - name: Scripts
 #        uses: ./actions/orgcreate
