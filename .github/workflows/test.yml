@@ -19,7 +19,7 @@ jobs:
           temp-repo-name: testspace.test.manual
           org-name:       munderseth
           repo-name:      test01
-          accesstoken: ${{ secrets.GH_Admin }}
+          accesstoken:    ${{ secrets.GH_Admin }}
       - name: Test Repo Teardown
         uses: ./actions/repo/teardown
         with:

@@ -16,7 +16,6 @@ inputs:
   accesstoken: # API access, same toke for both GH Orgs
     description: 'GH Admin access'
     required: true
- 
 runs:
   using: 'node12'
   main: 'setuprepo.js'
