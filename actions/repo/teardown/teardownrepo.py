@@ -18,8 +18,8 @@ def run_teardown():
   }
 
   print(url)
-  #response = requests.request("DELETE", url, data=payload, headers=headers, params=querystring)
-  #print(response.status_code)
+  response = requests.request("DELETE", url, data=payload, headers=headers, params=querystring)
+  print(response.status_code)
 
 def get_input():
     
