@@ -1,0 +1,21 @@
+name: 'Testspace New Run Session'
+description: 'Creating a new Project and Run'
+inputs:
+  ts-org:  
+    description: 'Testspace orgination name'
+    required: true
+  ts-username:  
+    description: 'Test User of TS Org'
+    required: true
+  ts-password: 
+    description: 'Test User password'
+    required: true
+  gh-repo:
+    description: 'Test Repo'
+    required: true
+  ts-project:
+    description: 'Testspace Project'
+    required: true
+runs:
+  using: 'node12'
+  main: 'runSession.js'

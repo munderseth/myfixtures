@@ -12,6 +12,14 @@ jobs:
       - name: Install
         run: |
           npm install 
+      - name: TS Session
+        uses: ./actions/run
+        with:
+          ts-org:      testorg1
+          ts-username: testuser
+          ts-password: ${{ secrets.TS_Password }}
+          gh-repo:     testRepoTEMP
+          ts-project:  munderseth:testRepoTEMP
       - name: Test TS Org Setup
         uses: ./actions/org/create
         with:
