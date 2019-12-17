@@ -24,7 +24,6 @@ async function run() {
         await write("4242 4242 4242 4242");
         await press("Tab");
         await write("123");
-        console.log(tsOrg, tsUser)
         await click("COMPLETE ACCOUNT");
        
         await click("Account");
