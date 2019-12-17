@@ -1,0 +1,20 @@
+name: 'Teardown Repo'
+description: 'Delete a Repo'
+inputs:
+  org-name:  # name of test repo
+    description: 'GitHub orgination to use'
+    required: true
+  repo-name:  # name of test repo
+    description: 'Repo to create'
+    required: true
+  accesstoken: # API access
+    description: 'GH Admin access'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - $${{ inputs.org-name }}
+    - $${{ inputs.repo-name }}
+    - $${{ inputs.accesstoken }}
+   

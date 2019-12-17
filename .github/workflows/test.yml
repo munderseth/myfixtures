@@ -12,10 +12,17 @@ jobs:
       - name: Install
         run: |
           npm install 
-      - name: Scripts
-        uses: ./actions/orgcreate
-        with:
-          ts-org:      "testorg43"
-          ts-username:  ${{ secrets.TS_Username }}
-          ts-password:  ${{ secrets.TS_Password }}
+      - name: Test Teardown
+          uses: ./actions/repo/teardown
+          with:
+            org-name:    munderseth
+            repo-name:   test01
+            accesstoken: ${{ secrets.GH_Admin }}
+     
+#      - name: Scripts
+#        uses: ./actions/orgcreate
+#        with:
+#          ts-org:      "testorg43"
+#          ts-username:  ${{ secrets.TS_Username }}
+#          ts-password:  ${{ secrets.TS_Password }}
         

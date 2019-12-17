@@ -1,0 +1,15 @@
+name: 'Setup testRepo'
+description: 'Creating a new testRepo from a template'
+inputs:
+  org-name:  # name of test repo
+    description: 'GitHub orgination to use'
+    required: true
+  repo-name:  # name of test repo
+    description: 'Repo to create'
+    required: true
+  accesstoken: # API access
+    description: 'GH Admin access'
+    required: true
+runs:
+  using: 'node12'
+  main: 'setuprepo.js'
