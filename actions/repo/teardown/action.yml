@@ -14,7 +14,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - $${{ inputs.org-name }}
-    - $${{ inputs.repo-name }}
-    - $${{ inputs.accesstoken }}
+    - ${{ inputs.org-name }}
+    - ${{ inputs.repo-name }}
+    - ${{ inputs.accesstoken }}
    
