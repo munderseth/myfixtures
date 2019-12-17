@@ -20,6 +20,6 @@ jobs:
         uses: ./actions/orgcreate
         with:
           ts-name:      "testorg42"
-          gh-username:  ${{ secrets.TS_Username }}
-          gh-password:  ${{ secrets.TS_Password }}
+          ts-username:  ${{ secrets.TS_Username }}
+          ts-password:  ${{ secrets.TS_Password }}
         
