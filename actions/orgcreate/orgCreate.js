@@ -23,6 +23,8 @@ async function run() {
         await write("4242 4242 4242 4242");
         await press("Tab");
         await write("123");
+        console.log("WAITING FOR 10 seconds ..")
+        await waitFor(10000);
         await click("COMPLETE ACCOUNT");
        
     } catch (error) {
