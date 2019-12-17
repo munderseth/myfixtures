@@ -5,17 +5,15 @@ jobs:
   one:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Node.js 12
-        uses: actions/setup-node@v1
+      uses: actions/checkout@v1
+      uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          node-version: 12
       - name: Install
         run: |
-          npm install -g taiko
+        #  npm install -g taiko
           npm install 
-          taiko --version
+        #  taiko --version
       - name: Scripts
         uses: ./actions/orgcreate
         with:

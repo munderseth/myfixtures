@@ -25,9 +25,6 @@ async function run() {
         await write("123");
         await click("COMPLETE ACCOUNT");
        
-        await click("Account");
-        await click("Cancel");
-        await click("CONFIRM");
     } catch (error) {
         console.error(error);
     } finally {
