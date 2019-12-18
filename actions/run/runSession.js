@@ -60,7 +60,7 @@ async function run() {
         await dropDown(near('STATUS')).select('PASSED');
         await press("Escape");
         await waitFor(2000)
-        await click("b1")
+        await click("session.001")
         await click($("a.blue"), toRightOf("session.001"));
         await press("Enter");
  
