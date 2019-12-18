@@ -21,7 +21,7 @@ jobs:
           gh-repo:     testRepoTEMP
           ts-project:  munderseth:testRepoTEMP
       - name: Delete Testspace project
-        users: ./actions/project/Delete
+        uses: ./actions/proj/delete
         with:
           ts-token:   ${{ secrets.TS_Password }}
           ts-org:     testorg1
