@@ -11,7 +11,8 @@ async function run() {
         const ghRepo     = core.getInput('gh-repo')
         const tsProject  = core.getInput('ts-project')
 
-        const signin = str.concat(tsOrg,".","stridespace.com")
+       // const signin = str.concat(tsOrg,".","stridespace.com")
+        signin = "testorg1.stridespace.com"
         console.log(signin)
       
         await openBrowser({ headless: true, ignoreCertificateErrors: true, args:['--window-size=1024,900']})
