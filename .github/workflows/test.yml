@@ -20,6 +20,12 @@ jobs:
           ts-password: ${{ secrets.TS_Password }}
           gh-repo:     testRepoTEMP
           ts-project:  munderseth:testRepoTEMP
+      - name: Delete Testspace project
+        users: ./actions/project/Delete
+        with:
+          ts-token:   ${{ secrets.TS_Password }}
+          ts-org:     testorg1
+          ts-project: munderseth:testRepoTEMP
       # - name: Test TS Org Setup
       #   uses: ./actions/org/create
       #   with:

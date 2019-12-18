@@ -1,0 +1,19 @@
+name: 'Testspace Delete Project'
+description: 'Deleting a Project'
+inputs:
+  ts-token:  
+    description: 'Testspace Admin token'
+    required: true
+  ts-org:  
+    description: 'Testspace orgination name'
+    required: true
+  ts-project:
+    description: 'Testspace Project'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.ts-token }}
+    - ${{ inputs.ts-org }}
+    - ${{ inputs.ts-project }}

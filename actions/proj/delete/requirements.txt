@@ -1,0 +1,2 @@
+requests
+git+https://github.com/s2technologies/testspace-python.git#egg=testspace-python
