@@ -17,13 +17,13 @@ jobs:
         with:
           ts-org:      testopen01
           ts-username: testuser
-          ts-password: ${{ secrets.TS_Password }}
+          ts-password: ${{ secrets.TS_Testuser_Password }}
       - name: Test TS Org Teardown
         uses: ./actions/org/cancel
         with:
           ts-org:      testopen01
           ts-username: testuser
-          ts-password: ${{ secrets.TS_Password }}
+          ts-password: ${{ secrets.TS_Testuser_Password }}
       - name: Test Repo Setup
         uses: ./actions/repo/setup
         with:
@@ -37,13 +37,13 @@ jobs:
         with:
           ts-org:      testorg1
           ts-username: testuser
-          ts-password: ${{ secrets.TS_Password }}
+          ts-password: ${{ secrets.TS_Testuser_Password }}
           gh-repo:     test01
           ts-project:  munderseth:test01
       - name: Delete Testspace project
         uses: ./actions/proj/delete
         with:
-          ts-token:   ${{ secrets.TS_Token }}
+          ts-token:   ${{ secrets.TS_Admin }}
           ts-org:     testorg1
           ts-project: munderseth:test01
       - name: Test Repo Teardown
