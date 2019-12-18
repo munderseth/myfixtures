@@ -43,6 +43,7 @@ async function run() {
         await click("master");
         await click("Run");
         await click("Lists");
+        console.log("Ready to create a Run Session ..")
         await click("New Test Session");
         await focus($('#test_session_name'))
 

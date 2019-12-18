@@ -21,19 +21,19 @@ jobs:
           gh-repo:     testRepoTEMP
           ts-project:  munderseth:testRepoTEMP
       - name: Test TS Org Setup
-        uses: ./actions/org/create
+#        uses: ./actions/org/create
         with:
           ts-org:      testopen01
           ts-username: testuser
           ts-password: ${{ secrets.TS_Password }}
       - name: Test TS Org Teardown
-        uses: ./actions/org/cancel
+#        uses: ./actions/org/cancel
         with:
           ts-org:      testopen01
           ts-username: testuser
           ts-password: ${{ secrets.TS_Password }}
       - name: Test Repo Setup
-        uses: ./actions/repo/setup
+#        uses: ./actions/repo/setup
         with:
           temp-org-name:  munderseth
           temp-repo-name: testspace.test.manual
@@ -41,7 +41,7 @@ jobs:
           repo-name:      test01
           accesstoken:    ${{ secrets.GH_Admin }}
       - name: Test Repo Teardown
-        uses: ./actions/repo/teardown
+#        uses: ./actions/repo/teardown
         with:
           org-name:    munderseth
           repo-name:   test01
