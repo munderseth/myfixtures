@@ -25,6 +25,7 @@ async function run() {
         console.log("Have logged in now ..")
 
         await click("New Project");
+        waitFor(2000)
         await click(ghRepo);
         await click("OK");
         console.log("Created Project, waiting for Space to show up ..");
