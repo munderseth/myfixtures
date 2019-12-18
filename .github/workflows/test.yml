@@ -23,7 +23,7 @@ jobs:
       - name: Delete Testspace project
         uses: ./actions/proj/delete
         with:
-          ts-token:   ${{ secrets.TS_Password }}
+          ts-token:   ${{ secrets.TS_Token }}
           ts-org:     testorg1
           ts-project: munderseth:testRepoTEMP
       # - name: Test TS Org Setup
