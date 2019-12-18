@@ -63,7 +63,7 @@ async function run() {
         await click("b1")
         await click($("a.blue"), toRightOf("session.001"));
         await press("Enter");
-
+ 
         
     } catch (error) {
         console.error(error);
