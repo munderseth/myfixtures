@@ -29,9 +29,9 @@ async function run() {
         await click(ghRepo);
         await click("OK");
         console.log("Created Project, waiting for Space to show up ..");
-        waitFor(8000);
         await click(tsProject);
-
+        waitFor(8000);
+        
         await click("master");
         await click("Run");
         await click("Lists");
