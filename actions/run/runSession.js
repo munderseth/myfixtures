@@ -25,26 +25,44 @@ async function run() {
         console.log("Have logged in now ..")
 
         await click("New Project");
-        waitFor(2000)
+        await waitFor(2000)
         await click(ghRepo);
         await click("OK");
-        console.log("Created Project, waiting for Space to show up ..");
+        
+        await waitFor(2000)
         await click(tsProject);
-        waitFor(8000);
+        console.log("Created Project, waiting a few seconds for Space to show up ..");
+        await waitFor(2000)
+        await click("Spaces")
+        await waitFor(2000)
+        await click("Spaces")
+        await waitFor(3000)
+        await click("Spaces")
+        await click("Spaces")
         
         await click("master");
         await click("Run");
         await click("Lists");
         await click("New Test Session");
-        await press("Tab");
-        await write("session.001");
+        await focus($('#test_session_name'))
+
+        await write("session.001")
         await click("SUBMIT");
-        await click("Basic One Suite with NO Steps");
-        await click("click here");
+
+        await waitFor(2000)
+        await focus(link('Basic One Suite with NO Steps'))
+        await click(link('Basic One Suite with NO Steps'))
+      
+        await hover('click here')
+        await click('click here')
+      
         await dropDown(near('STATUS')).select('PASSED');
         await press("Escape");
+        await waitFor(2000)
+        await click("b1")
         await click($("a.blue"), toRightOf("session.001"));
         await press("Enter");
+
         
     } catch (error) {
         console.error(error);
