@@ -13,7 +13,7 @@ jobs:
         run: |
           npm install 
       - name: Test TS Org Setup
-        uses: munderseth/myfixtures/actions/org/create@master
+        uses: ./actions/org/create@master
         with:
           ts-org:      testopen01
           ts-username: testuser
