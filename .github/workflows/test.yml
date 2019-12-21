@@ -32,8 +32,8 @@ jobs:
           org-name:       munderseth
           repo-name:      test01
           accesstoken:    ${{ secrets.GH_Admin }}
-      - name: TS Session
-        uses: ./actions/run
+      - name: TS Run
+        uses: munderseth/myfixtures/actions/run@master
         with:
           ts-org:      testorg
           ts-username: testuser
