@@ -15,7 +15,8 @@ async function run() {
         console.log(signin)
       
         await openBrowser({headless: true, args: ['--no-sandbox']});
-        await goto(signin)
+        //await goto(signin)
+        await goto("testorg.stridespace.com")
         await write(tsUser);
         await press("Tab");
         await write(tsPassword);
