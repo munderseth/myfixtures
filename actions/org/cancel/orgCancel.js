@@ -10,9 +10,10 @@ async function run () {
         const tsUser     = core.getInput('ts-username');
         const tsPassword = core.getInput('ts-password');
         
-       // await openBrowser();
-        await openBrowser({ headless: true, ignoreCertificateErrors: true, args:['--window-size=1024,900']})
-        // To-do: use goto("ts-org"+"stridespace.com") 
+        var signin = tsOrg.concat(".stridespace.com")
+        console.log(signin)
+      
+        await openBrowser({headless: true, args: ['--no-sandbox']});
         await goto("signin.stridespace.com");
         await write(tsUser);
         await press("Tab");
