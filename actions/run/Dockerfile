@@ -9,6 +9,6 @@ COPY package*.json ./
 RUN npm ci
 
 COPY runner.sh /runner.sh
-COPY runSession.js ./
+COPY runSession.js /runSession.js
 
 ENTRYPOINT ["/runner.sh"]
