@@ -1,4 +1,4 @@
-const { openBrowser, goto, write, press, click, dropDown, near, toRightOf, $, closeBrowser, waitFor, focus, hover, link, str } = require('taiko');
+const { openBrowser, goto, write, press, click, dropDown, near, toRightOf, $, closeBrowser, waitFor, focus, hover, link } = require('taiko');
 const core = require('@actions/core');
 
 async function run() {
@@ -11,12 +11,10 @@ async function run() {
         const ghRepo     = core.getInput('gh-repo')
         const tsProject  = core.getInput('ts-project')
 
-       // const signin = str.concat(tsOrg,".","stridespace.com")
-        signin = "testorg1.stridespace.com"
+        var signin = tsOrg.concat(".stridespace.com")
         console.log(signin)
       
         await openBrowser({ headless: true, ignoreCertificateErrors: true, args:['--window-size=1024,900']})
-        //await goto("signin.stridespace.com");
         await goto(signin)
         await write(tsUser);
         await press("Tab");
