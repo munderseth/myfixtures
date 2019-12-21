@@ -14,7 +14,7 @@ async function run() {
         var signin = tsOrg.concat(".stridespace.com")
         console.log(signin)
       
-        await openBrowser({ headless: true, ignoreCertificateErrors: true, args:['--window-size=1024,900']})
+        await openBrowser({headless: true, args: ['--no-sandbox']});
         await goto(signin)
         await write(tsUser);
         await press("Tab");
