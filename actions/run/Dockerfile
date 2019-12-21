@@ -8,6 +8,7 @@ RUN npm install taiko -g --allow-root --unsafe-perm=true
 COPY package*.json ./
 RUN npm ci
 
+COPY runner.sh /runner.sh
 COPY runSession.js ./
 
-ENTRYPOINT ["node", "/runSession.js"]
+ENTRYPOINT ["/runner.sh"]
