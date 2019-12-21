@@ -35,7 +35,7 @@ jobs:
       - name: TS Session
         uses: ./actions/run
         with:
-          ts-org:      testorg1
+          ts-org:      testorg
           ts-username: testuser
           ts-password: ${{ secrets.TS_Testuser_Password }}
           gh-repo:     test01
@@ -44,7 +44,7 @@ jobs:
         uses: ./actions/proj/delete
         with:
           ts-token:   ${{ secrets.TS_Admin }}
-          ts-org:     testorg1
+          ts-org:     testorg
           ts-project: munderseth:test01
       - name: Test Repo Teardown
         uses: ./actions/repo/teardown
