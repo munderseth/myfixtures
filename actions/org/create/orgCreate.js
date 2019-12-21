@@ -9,10 +9,9 @@ async function run() {
         const tsUser     = core.getInput('ts-username');
         const tsPassword = core.getInput('ts-password');
        
-        var signin = tsOrg.concat(".stridespace.com")
-        console.log(signin)
-      
         await openBrowser({headless: true, args: ['--no-sandbox']});
+        await goto("signin.stridespace.com");
+        
         await write(tsUser);
         await press("Tab");
         await write(tsPassword);
