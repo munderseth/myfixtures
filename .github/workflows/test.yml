@@ -18,7 +18,7 @@ jobs:
           ts-username: testuser
           ts-password: ${{ secrets.TS_Testuser_Password }}
       - name: Test Repo Setup
-        uses: ./actions/repo/setup
+        uses: muderseth/myfixtures/actions/repo/setup@master
         with:
           temp-org-name:  munderseth
           temp-repo-name: testspace.test.manual
