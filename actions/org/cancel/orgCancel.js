@@ -13,7 +13,7 @@ async function run () {
         var signin = tsOrg.concat(".stridespace.com")
         console.log(signin)
       
-        await openBrowser({headless: true, args: ['--no-sandbox']});
+        await openBrowser({headless: true, args: ['--no-sandbox','--window-size=1024,900']});
         await goto("signin.stridespace.com");
         await write(tsUser);
         await press("Tab");

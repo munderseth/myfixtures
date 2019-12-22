@@ -7,13 +7,13 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Test TS Org Setup
-        uses: ./actions/org/create
+        uses: munderseth/actions/org/create@master
         with:
           ts-org:      testopen01
           ts-username: testuser
           ts-password: ${{ secrets.TS_Testuser_Password }}
       - name: Test TS Org Teardown
-        uses: ./actions/org/cancel
+        uses: munderseth/actions/org/cancel@master
         with:
           ts-org:      testopen01
           ts-username: testuser
