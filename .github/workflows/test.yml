@@ -6,15 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/checkout@v1
       - name: Test TS Org Setup
-        uses: munderseth/actions/org/create@master
+        uses: munderseth/myfixtures/actions/org/create@master
         with:
           ts-org:      testopen01
           ts-username: testuser
           ts-password: ${{ secrets.TS_Testuser_Password }}
       - name: Test TS Org Teardown
-        uses: munderseth/actions/org/cancel@master
+        uses: munderseth/myfixtures/actions/org/cancel@master
         with:
           ts-org:      testopen01
           ts-username: testuser
