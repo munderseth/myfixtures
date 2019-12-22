@@ -19,10 +19,5 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.ts-org }}
-    - ${{ inputs.ts-username }}
-    - ${{ inputs.ts-password }}
-    - ${{ inputs.gh-repo }}
-    - ${{ inputs.ts-project }}
+ 
   

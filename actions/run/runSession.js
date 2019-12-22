@@ -8,13 +8,14 @@ async function run() {
         const tsOrg      = core.getInput('ts-org');
         const tsUser     = core.getInput('ts-username');
         const tsPassword = core.getInput('ts-password');
-        const ghRepo     = core.getInput('gh-repo')
-        const tsProject  = core.getInput('ts-project')
+        const ghRepo     = core.getInput('gh-repo');
+        const tsProject  = core.getInput('ts-project');
 
-        var signin = tsOrg.concat(".stridespace.com")
+        var signin = tsOrg.concat(".stridespace.com");
         console.log(signin)
       
-        await openBrowser({headless: true, args: ['--no-sandbox']});
+        await openBrowser({headless: false, args: ['--no-sandbox','--window-size=1500,900']});
+       
         //await goto(signin)
         await goto("testorg.stridespace.com")
         await write(tsUser);
