@@ -5,7 +5,6 @@ jobs:
   one:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
       - name: Test TS Org Setup
         uses: munderseth/myfixtures/actions/org/create@master
         with:
@@ -35,13 +34,13 @@ jobs:
           gh-repo:     test01
           ts-project:  munderseth:test01
       - name: Delete Testspace project
-        uses: ./actions/proj/delete
+        uses: munderseth/myfixtures/actions/proj/delete@master
         with:
           ts-token:   ${{ secrets.TS_Admin }}
           ts-org:     testorg
           ts-project: munderseth:test01
       - name: Test Repo Teardown
-        uses: ./actions/repo/teardown
+        uses: munderseth/myfixtures/actions/repo/teardown@master
         with:
           org-name:    munderseth
           repo-name:   test01
