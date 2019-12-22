@@ -6,6 +6,6 @@ RUN apt-get install -y wget unzip fontconfig locales gconf-service libasound2 li
 COPY package*.json ./
 RUN npm ci
 
-COPY orgCanceljs /orgCancel.js
+COPY orgCancel.js /orgCancel.js
 
 ENTRYPOINT ["node", "/orgCancel.js"]
