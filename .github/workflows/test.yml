@@ -6,19 +6,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test TS Org Setup
-        uses: munderseth/myfixtures/actions/org/create@master
+        uses: munderseth/myfixtures/actions/org/create@miminal-workflow
         with:
           ts-org:      testopen01
           ts-username: testuser
           ts-password: ${{ secrets.TS_Testuser_Password }}
       - name: Test TS Org Teardown
-        uses: munderseth/myfixtures/actions/org/cancel@master
+        uses: munderseth/myfixtures/actions/org/cancel@miminal-workflow
         with:
           ts-org:      testopen01
           ts-username: testuser
           ts-password: ${{ secrets.TS_Testuser_Password }}
       - name: Test Repo Setup
-        uses: munderseth/myfixtures/actions/repo/setup@master
+        uses: munderseth/myfixtures/actions/repo/setup@miminal-workflow
         with:
           temp-org-name:  munderseth
           temp-repo-name: testspace.test.manual
@@ -26,7 +26,7 @@ jobs:
           repo-name:      test01
           accesstoken:    ${{ secrets.GH_Admin }}
       - name: TS Run
-        uses: munderseth/myfixtures/actions/run@master
+        uses: munderseth/myfixtures/actions/run@miminal-workflow
         with:
           ts-org:      testorg
           ts-username: testuser
@@ -34,13 +34,13 @@ jobs:
           gh-repo:     test01
           ts-project:  munderseth:test01
       - name: Delete Testspace project
-        uses: munderseth/myfixtures/actions/proj/delete@master
+        uses: munderseth/myfixtures/actions/proj/delete@miminal-workflow
         with:
           ts-token:   ${{ secrets.TS_Admin }}
           ts-org:     testorg
           ts-project: munderseth:test01
       - name: Test Repo Teardown
-        uses: munderseth/myfixtures/actions/repo/teardown@master
+        uses: munderseth/myfixtures/actions/repo/teardown@miminal-workflow
         with:
           org-name:    munderseth
           repo-name:   test01
