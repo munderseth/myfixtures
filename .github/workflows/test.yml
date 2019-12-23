@@ -5,6 +5,7 @@ jobs:
   one:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - name: Test TS Org Setup
         uses: ./actions/org/create
         with:
