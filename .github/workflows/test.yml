@@ -6,12 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12'
-      - name: Install
-        run: |
-          npm install 
       - name: Test TS Org Setup
         uses: ./actions/org/create
         with:
@@ -33,7 +27,7 @@ jobs:
           repo-name:      test01
           accesstoken:    ${{ secrets.GH_Admin }}
       - name: TS Run
-        uses: munderseth/myfixtures/actions/run@master
+        uses: ./actions/run
         with:
           ts-org:      testorg
           ts-username: testuser

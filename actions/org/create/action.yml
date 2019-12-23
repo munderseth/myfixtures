@@ -11,5 +11,5 @@ inputs:
     description: 'Test User password'
     required: true
 runs:
-  using: 'node12'
-  main: 'orgCreate.js'
+  using: 'docker'
+  image: 'Dockerfile'
