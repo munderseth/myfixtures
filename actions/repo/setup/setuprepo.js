@@ -82,7 +82,7 @@ async function run() {
       body: 'Used for testing Simple Specs \n<pre>testspace:\n  branch: master \n  specs: \n    path: simple\n </pre>'
     });
     console.log(simpleIssue)
-
+    console.log("Creating NEW ISSUE")
     const { data: testSpecChange } = await octokit.issues.create({
       owner: orgName,
       repo: repoName,
